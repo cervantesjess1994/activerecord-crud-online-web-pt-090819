@@ -6,7 +6,7 @@
 # end                              # end
 
 def can_be_instantiated_and_then_saved
-  movie = Moview.create
+  movie = Movie.create
 end
 
 def can_be_created_with_a_hash_of_attributes
@@ -18,7 +18,8 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters?: false
   }
-  movie = Movie.create(:attributes)
+  movie = Movie.new
+  movie.save
 end
 
 def can_be_created_in_a_block(title, release_date)
